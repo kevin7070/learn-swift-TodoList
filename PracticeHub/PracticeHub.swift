@@ -11,7 +11,7 @@ import SwiftUI
 struct PracticeHub: App {
     var body: some Scene {
         WindowGroup {
-            TodoListMainVew()
+            MainMenuView()
         }
     }
 }
