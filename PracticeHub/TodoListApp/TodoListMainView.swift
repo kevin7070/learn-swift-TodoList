@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TodoListMainVew: View {
     @State private var tasks: [Task] = []
     @State private var newTaskTitle: String = ""
 
@@ -55,5 +55,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TodoListMainVew()
 }
