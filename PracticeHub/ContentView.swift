@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct MainMenuView: View {
+struct ContentView: View {
     var body: some View {
         NavigationStack {
-            VStack(spacing: 40) {
+            VStack {
                 Text("Practice Hub")
-                    .font(.largeTitle)
-                    .bold()
+                    .fontWeight(.bold)
+                    .font(.system(.title, design: .rounded))
+                    .foregroundColor(Color(.systemIndigo))
             }
 
             // Todo List App Icon
@@ -35,5 +36,5 @@ struct MainMenuView: View {
 }
 
 #Preview {
-    MainMenuView()
+    ContentView()
 }
