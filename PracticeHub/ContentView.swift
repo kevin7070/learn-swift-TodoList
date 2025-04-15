@@ -11,17 +11,28 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Practice Hub")
-                    .fontWeight(.bold)
-                    .font(.system(.title, design: .rounded))
-                    .foregroundColor(Color(.systemIndigo))
+                HStack {
+                    Image(systemName: "cursorarrow.rays")
+                        .font(
+                            .system(size: 28, weight: .bold, design: .rounded)
+                        )
+                        .foregroundColor(Color(.systemIndigo))
+                        .shadow(
+                            color: Color(.systemYellow), radius: 0, x: 2, y: 2)
+
+                    Text("Practice Hub")
+                        .font(
+                            .system(size: 28, weight: .bold, design: .rounded)
+                        )
+                        .foregroundColor(Color(.systemIndigo))
+                }
 
                 // Todo List App Icon
                 NavigationLink(destination: TodoListMainVew()) {
                     VStack {
                         Image(systemName: "checkmark.circle.fill").resizable()
-                            .frame(width: 60, height: 60).foregroundColor(
-                                Color(.systemYellow))
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(Color(.systemYellow))
                         Text("Todo List")
                             .foregroundColor(Color(.white))
                             .shadow(color: .white, radius: 2, x: 0, y: 1)
@@ -30,7 +41,7 @@ struct ContentView: View {
                     .background(Color(.black))
                     .cornerRadius(10)
                     .shadow(radius: 4)
-                    .rotationEffect(.degrees(2))
+                    .rotationEffect(.degrees(-2))
                 }
 
                 Spacer()
@@ -54,7 +65,7 @@ struct ContentView: View {
                     .foregroundColor(Color(.black))
             }
 
-        }.padding()
+        }
     }
 }
 
